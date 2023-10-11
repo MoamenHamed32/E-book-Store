@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  padding-top: 88px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  padding: 20px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: white;
+}
+header a:first-of-type {
+  text-decoration: none;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo span:first-of-type {
+  color: #06abab;
+}
+#logo span:last-of-type {
+  color: #ea545f;
+}
+
+header #search-comp {
+  width: 50%;
+  position: relative;
+}
+header #search-comp .search-bar {
+  width: 100%;
+  height: 40px;
+  border: 0.5px solid rgba(160, 160, 160, 0.6);
+  border-radius: 20px;
+  outline: none;
+  padding-left: 20px;
+}
+header #search-comp .search-btn {
+  position: absolute;
+  width: 15%;
+  border: none;
+  height: 40px;
+  right: 0;
+  background-color: #ea545f;
+  color: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+}
+header #shopping-cart {
+  position: relative;
+}
+header #shopping-cart i {
+  color: #ea545f;
+  cursor: pointer;
+}
+
+header #shopping-cart span {
+  background-color: #06abab;
+  display: none;
+  font-size: 0.7rem;
+  justify-content: center;
+  align-items: center;
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  border-radius: 3px;
+  bottom: 16px;
+  right: -10px;
+}
+
+#hero {
+  height: calc(100vh - 88px);
+  background: url(./imgs/image1.jpg);
+  background-size: cover;
+  position: relative;
+  margin-bottom: 100px;
+}
+#hero .container {
+  width: 50%;
+  height: 50%;
+  top: 30%;
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#hero #logo {
+  font-size: 2.5rem;
+}
+#hero .container .quote {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+}
+#hero .container .quote span {
+  font-size: 1.7rem;
+  color: #ea545f;
+}
+#hero .container button {
+  width: 130px;
+  height: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  border: 1px solid #ea545f;
+  background-color: #ea545f;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+#hero .container button:hover {
+  background-color: transparent;
+  color: #ea545f;
+}
+#books {
+  margin-bottom: 100px;
+}
+#books .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-height: 885px;
+  overflow-y: scroll;
+  padding: 30px 0px;
+}
+
+#books .cards::-webkit-scrollbar {
+  width: 8px;
+}
+#books .cards::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+#books .cards::-webkit-scrollbar-thumb {
+  background: rgba(170, 170, 170, 0.644);
+  border-radius: 10px;
+}
+#books .card {
+  width: 300px;
+  min-height: 400px;
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 11px 7px 12px rgb(126 126 126 / 27%);
+}
+#books .card .img {
+  width: 100%;
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fad405;
+}
+
+#books .card img {
+  height: 65%;
+  min-height: 65%;
+  object-fit: contain;
+  margin-top: -10px;
+  box-shadow: 7px 6px 6px rgb(35 35 35 / 49%);
+}
+#books .card .book-info {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+#books .card .book-info .title {
+  width: 90%;
+  font-size: 0.9rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#books .card .desc {
+  min-height: 54px;
+  font-size: 0.75rem;
+  color: rgba(65, 65, 65, 0.525);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#books .card .author {
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+#books .card .author li {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 0.9rem;
+  max-height: 18px;
+  overflow: hidden;
+}
+
+#books .card .btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#books .card .btns button {
+  width: 120px;
+  height: 30px;
+  background-color: #ea545f;
+  border-radius: 15px;
+  border: 1px solid #ea545f;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+#books .card .btns button:hover {
+  background-color: transparent;
+  color: #ea545f;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+footer .container .left-section {
+  width: 30%;
+}
+footer .container .left-section #logo {
+  margin-bottom: 20px;
+}
+footer .container .left-section .copyrights {
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+}
+footer .container .left-section .copyrights p span:first-of-type {
+  color: #ea545f;
+}
+footer .container .left-section .copyrights p span:last-of-type {
+  color: #06abab;
+}
+footer .container .left-section .social-links a {
+  color: #ea545f;
+  margin-right: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+footer .social-links a:first-of-type:hover {
+  color: #3b5998;
+}
+footer .social-links a:nth-child(2):hover {
+  color: #00acee;
+}
+footer .social-links a:nth-child(3):hover {
+  color: #d6249f;
+}
+footer .social-links a:last-of-type:hover {
+  color: #0072b1;
+}
+
+footer .container .right-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  padding: 20px 0;
+}
+
+footer .right-section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+footer .right-section div h3 {
+  font-weight: 600;
+}
+footer .right-section div a {
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s ease-in-out;
+}
+
+footer .right-section div a:hover {
+  color: #ea545f;
+}
+
+/* -------------------Book Page Start------------------- */
+
+#book {
+  padding: 15px 0;
+}
+#book .container {
+  background-color: rgb(240, 240, 240);
+  padding: 20px;
+  border-radius: 20px;
+}
+#book .upper-section {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+#book .upper-section .img {
+  width: 40%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fad405;
+  border-radius: 20px;
+}
+#book .upper-section .img img {
+  height: 65%;
+  object-fit: contain;
+  margin-top: -10px;
+  box-shadow: 7px 6px 6px rgb(35 35 35 / 49%);
+}
+
+#book .upper-section .info {
+  width: 40%;
+}
+#book .upper-section .info .title {
+  font-size: 1.5rem;
+}
+#book .upper-section .info .desc {
+  height: 200px;
+  font-size: 0.9rem;
+  color: rgba(65, 65, 65, 0.525);
+  display: -webkit-box;
+  -webkit-line-clamp: 11;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#book .mid-section {
+  padding: 0 50px;
+  margin-bottom: 40px;
+}
+#book .mid-section .authors {
+  margin-bottom: 10px;
+}
+#book .mid-section ul {
+  margin-left: 40px;
+  display: flex;
+  gap: 40px;
+}
+#book .mid-section ul li {
+  color: gray;
+  font-family: "Dancing Script", cursive;
+}
+#book .bottom-section {
+  padding: 0 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+#book .bottom-section h3 {
+  margin-bottom: 20px;
+}
+#book .bottom-section h3 span {
+  margin-left: 20px;
+  font-weight: 500;
+  color: gray;
+}
